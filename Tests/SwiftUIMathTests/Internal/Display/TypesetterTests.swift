@@ -4,6 +4,7 @@ import Testing
 
 @testable import SwiftUIMath
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension CGPoint {
 
   func isEqual(to p: CGPoint, accuracy: CGFloat) -> Bool {
@@ -21,6 +22,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func simpleVariable() throws {
     let font = try makeFont()
     let mathList = Math.AtomList()
@@ -54,6 +56,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func multipleVariables() throws {
     let font = try makeFont()
     let mathList = Math.AtomFactory.mathListForCharacters("xyzw")
@@ -85,6 +88,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func variablesAndNumbers() throws {
     let font = try makeFont()
     let mathList = Math.AtomFactory.mathListForCharacters("xy2w")
@@ -116,6 +120,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func equationWithOperatorsAndRelations() throws {
     let font = try makeFont()
     let mathList = Math.AtomFactory.mathListForCharacters("2x+3=y")
@@ -147,6 +152,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func superscript() throws {
     let font = try makeFont()
     let mathList = Math.AtomList()
@@ -198,6 +204,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func subscriptAtom() throws {
     let font = try makeFont()
     let mathList = Math.AtomList()
@@ -249,6 +256,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func supersubscript() throws {
     let font = try makeFont()
     let mathList = Math.AtomList()
@@ -322,6 +330,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func radical() throws {
     let font = try makeFont()
     let mathList = Math.AtomList()
@@ -372,6 +381,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func radicalWithDegree() throws {
     let font = try makeFont()
     let mathList = Math.AtomList()
@@ -442,6 +452,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func fraction() throws {
     let font = try makeFont()
     let mathList = Math.AtomList()
@@ -512,6 +523,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func atop() throws {
     let font = try makeFont()
     let mathList = Math.AtomList()
@@ -582,6 +594,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func binomial() throws {
     let font = try makeFont()
     let mathList = Math.AtomList()
@@ -678,6 +691,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func largeOpNoLimitsText() throws {
     let font = try makeFont()
     let mathList = Math.AtomList()
@@ -718,6 +732,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func largeOpNoLimitsSymbol() throws {
     let font = try makeFont()
     let mathList = Math.AtomList()
@@ -759,6 +774,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func largeOpNoLimitsSymbolWithScripts() throws {
     let font = try makeFont()
     let mathList = Math.AtomList()
@@ -842,6 +858,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func largeOpWithLimitsTextWithScripts() throws {
     let font = try makeFont()
     let mathList = Math.AtomList()
@@ -902,6 +919,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func largeOpWithLimitsSymboltWithScripts() throws {
     let font = try makeFont()
     let mathList = Math.AtomList()
@@ -978,6 +996,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func largeOpWithLimitsInlineMode_Limit() throws {
     let font = try makeFont()
     // Test that \lim in inline/text mode shows limits above/below (not to the side)
@@ -1005,6 +1024,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func largeOpWithLimitsInlineMode_Sum() throws {
     let font = try makeFont()
     // Test that \sum in inline/text mode shows limits above/below (not to the side)
@@ -1033,6 +1053,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func largeOpWithLimitsInlineMode_Product() throws {
     let font = try makeFont()
     // Test that \prod in inline/text mode shows limits above/below (not to the side)
@@ -1061,6 +1082,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func fractionInlineMode_NormalFontSize() throws {
     let font = try makeFont()
     // Test that \(...\) delimiter doesn't make fractions too small
@@ -1094,6 +1116,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func fractionInlineDelimiters_NormalSize() throws {
     let font = try makeFont()
     // Test that \(\frac{a}{b}\) has full-sized numerator/denominator
@@ -1119,6 +1142,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexFractionInlineMode() throws {
     let font = try makeFont()
     // Test that complex fractions in inline mode render at normal size
@@ -1146,6 +1170,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func inner() throws {
     let font = try makeFont()
     let innerList = Math.AtomList()
@@ -1220,6 +1245,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func overline() throws {
     let font = try makeFont()
     let mathList = Math.AtomList()
@@ -1269,6 +1295,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func underline() throws {
     let font = try makeFont()
     let mathList = Math.AtomList()
@@ -1318,6 +1345,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func spacing() throws {
     let font = try makeFont()
     let mathList = Math.AtomList()
@@ -1368,6 +1396,7 @@ struct TypesetterTests {
 
   // For issue: https://github.com/kostub/iosMath/issues/5
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func largeRadicalDescent() throws {
     let font = try makeFont()
     let list = Math.Parser.build(
@@ -1381,6 +1410,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func mathTable() throws {
     let font = try makeFont()
     let c00 = Math.AtomFactory.mathListForCharacters("1")
@@ -1460,6 +1490,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func latexSymbols() throws {
     let font = try makeFont()
     // Test all latex symbols
@@ -1568,6 +1599,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func variables() throws {
     // Test all variables
     let allSymbols = Math.AtomFactory.supportedLatexSymbolNames
@@ -1587,6 +1619,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func styleChanges() throws {
     let font = try makeFont()
     let frac = Math.AtomFactory.fraction(withNumeratorString: "1", denominatorString: "2")
@@ -1612,6 +1645,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func styleMiddle() throws {
     let font = try makeFont()
     let atom1 = Math.AtomFactory.atom(forCharacter: "x")!
@@ -1656,6 +1690,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func accent() throws {
     let font = try makeFont()
     let mathList = Math.AtomList()
@@ -1711,6 +1746,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func wideAccent() throws {
     let font = try makeFont()
     let mathList = Math.AtomList()
@@ -1766,6 +1802,7 @@ struct TypesetterTests {
   // MARK: - Interatom Line Breaking Tests
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func interatomLineBreaking_SimpleEquation() throws {
     let font = try makeFont()
     // Simple equation that should break between atoms when width is constrained
@@ -1795,6 +1832,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func interatomLineBreaking_TextAndMath() throws {
     let font = try makeFont()
     // The user's specific example: text mixed with math
@@ -1829,6 +1867,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func interatomLineBreaking_BreaksAtAtomBoundaries() throws {
     let font = try makeFont()
     // Test that breaking happens between atoms, not within them
@@ -1853,6 +1892,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func interatomLineBreaking_WithSuperscripts() throws {
     let font = try makeFont()
     // Test breaking with atoms that have superscripts
@@ -1871,6 +1911,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func interatomLineBreaking_NoBreakingWhenNotNeeded() throws {
     let font = try makeFont()
     // Test that short content doesn't break unnecessarily
@@ -1889,6 +1930,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func interatomLineBreaking_BreaksAfterOperators() throws {
     let font = try makeFont()
     // Test that breaking prefers to happen after operators (good break points)
@@ -1912,6 +1954,7 @@ struct TypesetterTests {
   // MARK: - Complex Display Line Breaking Tests (Fractions & Radicals)
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexDisplay_FractionStaysInlineWhenFits() throws {
     let font = try makeFont()
     // Fraction that should stay inline with surrounding content
@@ -1937,6 +1980,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexDisplay_FractionBreaksWhenTooWide() throws {
     let font = try makeFont()
     // Multiple fractions with narrow width should break
@@ -1959,6 +2003,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexDisplay_RadicalStaysInlineWhenFits() throws {
     let font = try makeFont()
     // Radical that should stay inline with surrounding content
@@ -1984,6 +2029,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexDisplay_RadicalBreaksWhenTooWide() throws {
     let font = try makeFont()
     // Multiple radicals with narrow width should break
@@ -2006,6 +2052,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexDisplay_MixedFractionsAndRadicals() throws {
     let font = try makeFont()
     // Mix of fractions and radicals
@@ -2025,6 +2072,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexDisplay_FractionWithComplexNumerator() throws {
     let font = try makeFont()
     // Fraction with more complex content
@@ -2041,6 +2089,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexDisplay_RadicalWithDegree() throws {
     let font = try makeFont()
     // Cube root
@@ -2057,6 +2106,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexDisplay_NoBreakingWithoutWidthConstraint() throws {
     let font = try makeFont()
     // Without width constraint, should never break
@@ -2085,6 +2135,7 @@ struct TypesetterTests {
   // MARK: - Additional Recommended Tests
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func edgeCase_VeryNarrowWidth() throws {
     let font = try makeFont()
     // Test behavior with extremely narrow width constraint
@@ -2108,6 +2159,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func edgeCase_VeryWideAtom() throws {
     let font = try makeFont()
     // Test handling of atom that's wider than maxWidth constraint
@@ -2127,6 +2179,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func mixedScriptsAndNonScripts() throws {
     let font = try makeFont()
     // Test mixing atoms with scripts and without scripts
@@ -2145,6 +2198,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func multipleLineBreaks() throws {
     let font = try makeFont()
     // Test expression that requires 4+ line breaks
@@ -2176,6 +2230,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func unicodeTextWrapping() throws {
     let font = try makeFont()
     // Test wrapping with Unicode characters (including CJK)
@@ -2197,6 +2252,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func numberProtection() throws {
     let font = try makeFont()
     // Test that numbers don't break in the middle
@@ -2215,6 +2271,7 @@ struct TypesetterTests {
   // MARK: - Tests for Not-Yet-Optimized Cases (Document Current Behavior)
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func currentBehavior_LargeOperators() throws {
     let font = try makeFont()
     // Documents current behavior: large operators still force line breaks
@@ -2231,6 +2288,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func currentBehavior_NestedDelimiters() throws {
     let font = try makeFont()
     // Documents current behavior: \left...\right still forces line breaks
@@ -2247,6 +2305,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func currentBehavior_ColoredExpressions() throws {
     let font = try makeFont()
     // Documents current behavior: colored sections still force line breaks
@@ -2263,6 +2322,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func currentBehavior_MatricesWithSurroundingContent() throws {
     let font = try makeFont()
     // Documents current behavior: matrices still force line breaks
@@ -2279,6 +2339,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func realWorldExample_QuadraticFormula() throws {
     let font = try makeFont()
     // Real-world test: quadratic formula with width constraint
@@ -2295,6 +2356,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func realWorldExample_ComplexFraction() throws {
     let font = try makeFont()
     // Real-world test: continued fraction
@@ -2311,6 +2373,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func realWorldExample_MixedOperationsWithFractions() throws {
     let font = try makeFont()
     // Real-world test: mixed arithmetic with multiple fractions
@@ -2335,6 +2398,7 @@ struct TypesetterTests {
   // MARK: - Large Operator Tests (NEWLY FIXED!)
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexDisplay_LargeOperatorStaysInlineWhenFits() throws {
     let font = try makeFont()
     // Test that inline-style large operators stay inline when they fit
@@ -2354,6 +2418,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexDisplay_LargeOperatorBreaksWhenTooWide() throws {
     let font = try makeFont()
     // Test that large operators break when they don't fit
@@ -2376,6 +2441,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexDisplay_MultipleLargeOperators() throws {
     let font = try makeFont()
     // Test multiple large operators in sequence
@@ -2398,6 +2464,7 @@ struct TypesetterTests {
   // MARK: - Delimiter Tests (NEWLY FIXED!)
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexDisplay_DelimitersStayInlineWhenFit() throws {
     let font = try makeFont()
     // Test that delimited expressions stay inline when they fit
@@ -2416,6 +2483,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexDisplay_DelimitersBreakWhenTooWide() throws {
     let font = try makeFont()
     // Test that delimited expressions break when they don't fit
@@ -2438,6 +2506,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexDisplay_NestedDelimitersWithWrapping() throws {
     let font = try makeFont()
     // Test that inner content of delimiters respects width constraints
@@ -2459,6 +2528,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexDisplay_MultipleDelimiters() throws {
     let font = try makeFont()
     // Test multiple delimited expressions
@@ -2479,6 +2549,7 @@ struct TypesetterTests {
   // MARK: - Color Tests (NEWLY FIXED!)
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexDisplay_ColoredExpressionStaysInlineWhenFits() throws {
     let font = try makeFont()
     // Test that colored expressions stay inline when they fit
@@ -2497,6 +2568,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexDisplay_ColoredExpressionBreaksWhenTooWide() throws {
     let font = try makeFont()
     // Test that colored expressions break when they don't fit
@@ -2521,6 +2593,7 @@ struct TypesetterTests {
   // Removed testComplexDisplay_ColoredContentWraps - colored expression tests above are sufficient
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexDisplay_MultipleColoredSections() throws {
     let font = try makeFont()
     // Test multiple colored sections
@@ -2541,6 +2614,7 @@ struct TypesetterTests {
   // MARK: - Matrix Tests (NEWLY FIXED!)
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexDisplay_SmallMatrixStaysInlineWhenFits() throws {
     let font = try makeFont()
     // Test that small matrices stay inline when they fit
@@ -2559,6 +2633,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexDisplay_MatrixBreaksWhenTooWide() throws {
     let font = try makeFont()
     // Test that large matrices break when they don't fit
@@ -2577,6 +2652,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexDisplay_MatrixWithSurroundingContent() throws {
     let font = try makeFont()
     // Real-world test: matrix in equation
@@ -2600,6 +2676,7 @@ struct TypesetterTests {
   // MARK: - Integration Tests (All Complex Displays)
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexDisplay_MixedComplexElements() throws {
     let font = try makeFont()
     // Test mixing all complex display types
@@ -2625,6 +2702,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexDisplay_RealWorldQuadraticWithColor() throws {
     let font = try makeFont()
     // Real-world: colored quadratic formula
@@ -2648,6 +2726,7 @@ struct TypesetterTests {
   // MARK: - Regression Test for Sum Equation Layout Bug
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func sumEquationWithFraction_CorrectOrdering() throws {
     let font = try makeFont()
     // Test case for: \(\sum_{i=1}^{n} i = \frac{n(n+1)}{2}\)
@@ -2701,6 +2780,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func sumEquationWithFraction_WithWidthConstraint() throws {
     // Test case for: \(\sum_{i=1}^{n} i = \frac{n(n+1)}{2}\) with width constraint
     // This reproduces the issue where = appears at the end instead of in the middle
@@ -2772,6 +2852,7 @@ struct TypesetterTests {
   // MARK: - Improved Script Handling Tests
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func scriptedAtoms_StayInlineWhenFit() throws {
     let font = try makeFont()
     // Test that atoms with superscripts stay inline when they fit
@@ -2803,6 +2884,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func scriptedAtoms_BreakWhenTooWide() throws {
     let font = try makeFont()
     // Test that atoms with superscripts break when width is exceeded
@@ -2830,6 +2912,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func mixedScriptedAndNonScripted() throws {
     let font = try makeFont()
     // Test mixing scripted and non-scripted atoms
@@ -2852,6 +2935,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func subscriptsAndSuperscripts() throws {
     let font = try makeFont()
     // Test atoms with both subscripts and superscripts
@@ -2873,6 +2957,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func realWorld_QuadraticExpansion() throws {
     let font = try makeFont()
     // Real-world test: quadratic expansion with exponents
@@ -2894,6 +2979,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func realWorld_Polynomial() throws {
     let font = try makeFont()
     // Real-world test: polynomial with multiple terms
@@ -2915,6 +3001,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func scriptedAtoms_NoBreakingWithoutConstraint() throws {
     let font = try makeFont()
     // Test that scripted atoms don't break unnecessarily without width constraint
@@ -2940,6 +3027,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexScriptedExpression() throws {
     let font = try makeFont()
     // Test complex expression mixing fractions and scripts
@@ -2963,6 +3051,7 @@ struct TypesetterTests {
   // MARK: - Break Quality Scoring Tests
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func breakQuality_PreferAfterBinaryOperator() throws {
     let font = try makeFont()
     // Test that breaks prefer to occur after binary operators (+, -, ×, ÷)
@@ -2992,6 +3081,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func breakQuality_PreferAfterRelation() throws {
     let font = try makeFont()
     // Test that breaks prefer to occur after relation operators (=, <, >)
@@ -3018,6 +3108,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func breakQuality_AvoidAfterOpenBracket() throws {
     let font = try makeFont()
     // Test that breaks avoid occurring immediately after open brackets
@@ -3045,6 +3136,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func breakQuality_LookAheadFindsBetterBreak() throws {
     let font = try makeFont()
     // Test that look-ahead finds better break points
@@ -3074,6 +3166,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func breakQuality_MultipleOperators() throws {
     let font = try makeFont()
     // Test with multiple operators - should break at best available points
@@ -3105,6 +3198,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func breakQuality_ComplexExpression() throws {
     let font = try makeFont()
     // Test complex expression with various atom types
@@ -3126,6 +3220,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func breakQuality_NoBreakWhenNotNeeded() throws {
     let font = try makeFont()
     // Test that break quality scoring doesn't add unnecessary breaks
@@ -3151,6 +3246,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func breakQuality_PenaltyOrdering() throws {
     let font = try makeFont()
     // Test that penalty system correctly orders break preferences
@@ -3181,6 +3277,7 @@ struct TypesetterTests {
   // MARK: - Dynamic Line Height Tests
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func dynamicLineHeight_TallContentHasMoreSpacing() throws {
     let font = try makeFont()
     // Test that lines with tall content (fractions) have appropriate spacing
@@ -3216,6 +3313,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func dynamicLineHeight_RegularContentHasReasonableSpacing() throws {
     let font = try makeFont()
     // Test that lines with regular content don't have excessive spacing
@@ -3249,6 +3347,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func dynamicLineHeight_MixedContentVariesSpacing() throws {
     let font = try makeFont()
     // Test that spacing adapts to each line's content
@@ -3273,6 +3372,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func dynamicLineHeight_LargeOperatorsGetAdequateSpace() throws {
     let font = try makeFont()
     // Test that large operators with limits get adequate vertical spacing
@@ -3304,6 +3404,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func dynamicLineHeight_ConsistentWithinSimilarContent() throws {
     let font = try makeFont()
     // Test that similar lines get similar spacing
@@ -3337,6 +3438,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func dynamicLineHeight_NoRegressionOnSingleLine() throws {
     let font = try makeFont()
     // Test that single-line expressions still work correctly
@@ -3353,6 +3455,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func dynamicLineHeight_DeepFractionsGetExtraSpace() throws {
     let font = try makeFont()
     // Test that nested/continued fractions get adequate spacing
@@ -3374,6 +3477,7 @@ struct TypesetterTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func dynamicLineHeight_RadicalsWithIndicesGetSpace() throws {
     let font = try makeFont()
     // Test that radicals (especially with degrees like cube roots) get adequate spacing

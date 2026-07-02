@@ -248,6 +248,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func builder() throws {
     let data = getTestData()
     for testCase in data {
@@ -265,6 +266,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func superscript() throws {
     let data = getTestDataSuperscript()
     for testCase in data {
@@ -299,6 +301,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func `subscript`() throws {
     let data = getTestDataSubscript()
     for testCase in data {
@@ -333,6 +336,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func superSubscript() throws {
     let data = getTestDataSuperSubscript()
     for testCase in data {
@@ -366,6 +370,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func symbols() throws {
     let str = "5\\times3^{2\\div2}"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -395,6 +400,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func frac() throws {
     let str = "\\frac1c"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -425,6 +431,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func fracInFrac() throws {
     let str = "\\frac1\\frac23"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -464,6 +471,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func sqrt() throws {
     let str = "\\sqrt2"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -484,6 +492,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func sqrtInSqrt() throws {
     let str = "\\sqrt\\sqrt2"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -510,6 +519,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func rad() throws {
     let str = "\\sqrt[3]2"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -536,6 +546,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func sqrtWithoutRadicand() throws {
     let str = "\\sqrt"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -553,6 +564,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func sqrtWithDegreeWithoutRadicand() throws {
     let str = "\\sqrt[3]"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -575,6 +587,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func leftRight() throws {
     let data = getTestDataLeftRight()
     for testCase in data {
@@ -609,6 +622,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func over() throws {
     let str = "1 \\over c"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -639,6 +653,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func overInParens() throws {
     let str = "5 + {1 \\over c} + 8"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -672,6 +687,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func atop() throws {
     let str = "1 \\atop c"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -702,6 +718,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func atopInParens() throws {
     let str = "5 + {1 \\atop c} + 8"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -735,6 +752,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func choose() throws {
     let str = "n \\choose k"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -765,6 +783,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func brack() throws {
     let str = "n \\brack k"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -795,6 +814,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func brace() throws {
     let str = "n \\brace k"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -825,6 +845,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func binom() throws {
     let str = "\\binom{n}{k}"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -855,6 +876,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func overLine() throws {
     let str = "\\overline 2"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -875,6 +897,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func underline() throws {
     let str = "\\underline 2"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -895,6 +918,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func accent() throws {
     let str = "\\bar x"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -915,6 +939,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func accentedCharacter() throws {
     let str = "\u{00E1}"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -935,6 +960,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func mathSpace() throws {
     let str = "\\!"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -950,6 +976,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func mathStyle() throws {
     let str = "\\textstyle y \\scriptstyle x"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -970,6 +997,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func matrix() throws {
     let str = "\\begin{matrix} x & y \\\\ z & w \\end{matrix}"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -1004,6 +1032,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func pMatrix() throws {
     let str = "\\begin{pmatrix} x & y \\\\ z & w \\end{pmatrix}"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -1053,6 +1082,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func defaultTable() throws {
     let str = "x \\\\ y"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -1083,6 +1113,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func defaultTableWithCols() throws {
     let str = "x & y \\\\ z & w"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -1113,6 +1144,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func eqalign() throws {
     let str1 = "\\begin{eqalign}x&y\\\\ z&w\\end{eqalign}"
     let str2 = "\\begin{split}x&y\\\\ z&w\\end{split}"
@@ -1151,6 +1183,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func displayLines() throws {
     let str1 = "\\begin{displaylines}x\\\\ y\\end{displaylines}"
     let str2 = "\\begin{gather}x\\\\ y\\end{gather}"
@@ -1183,6 +1216,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func errors() throws {
     let data = getTestDataParseErrors()
     for testCase in data {
@@ -1197,6 +1231,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func custom() throws {
     let str = "\\lcm(a,b)"
     var error: Math.ParserError? = nil
@@ -1227,6 +1262,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func fontSingle() throws {
     let str = "\\mathbf x"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -1242,6 +1278,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func fontOneChar() throws {
     let str = "\\cal xy"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -1262,6 +1299,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func fontMultipleChars() throws {
     let str = "\\frak{xy}"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -1282,6 +1320,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func fontOneCharInside() throws {
     let str = "\\sqrt \\mathrm x y"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -1308,6 +1347,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func text() throws {
     let str = "\\text{x y}"
     let list = try #require(Math.Parser.build(fromString: str))
@@ -1332,6 +1372,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func limits() throws {
     // Int with no limits (default)
     var str = "\\int"
@@ -1359,6 +1400,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func noLimits() throws {
     // Sum with limits (default)
     var str = "\\sum"
@@ -1388,6 +1430,7 @@ struct ParserTests {
   // MARK: - Inline and Display Math Delimiter Tests
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func inlineMathDollar() throws {
     let str = "$x^2$"
     let list = Math.Parser.build(fromString: str)
@@ -1407,6 +1450,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func inlineMathParens() throws {
     let str = "\\(E=mc^2\\)"
     let list = Math.Parser.build(fromString: str)
@@ -1424,6 +1468,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func inlineMathWithCases() throws {
     let str = "\\(\\begin{cases} x + y = 5 \\\\ 2x - y = 1 \\end{cases}\\)"
     let list = Math.Parser.build(fromString: str)
@@ -1452,6 +1497,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func inlineMathVectorDot() throws {
     let str = "$\\vec{a} \\cdot \\vec{b}$"
     let list = Math.Parser.build(fromString: str)
@@ -1474,6 +1520,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func displayMathDoubleDollar() throws {
     let str = "$$x^2 + y^2 = z^2$$"
     let list = Math.Parser.build(fromString: str)
@@ -1485,6 +1532,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func displayMathBrackets() throws {
     let str = "\\[\\sum_{i=1}^{n} i = \\frac{n(n+1)}{2}\\]"
     let list = Math.Parser.build(fromString: str)
@@ -1503,6 +1551,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func displayMathCasesWithoutDelimiters() throws {
     // This should work as before (backward compatibility)
     let str = "\\begin{cases} x + y = 5 \\\\ 2x - y = 1 \\end{cases}"
@@ -1533,6 +1582,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func backwardCompatibilityNoDelimiters() throws {
     // Test that expressions without delimiters still work
     let str = "x^2 + y^2 = z^2"
@@ -1541,6 +1591,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func emptyInlineMath() throws {
     let str = "$$$"  // This is $$$ which should be treated as $$ + $
     var error: Math.ParserError? = nil
@@ -1550,6 +1601,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func emptyDisplayMath() throws {
     let str = "\\[\\]"
     var error: Math.ParserError? = nil
@@ -1559,6 +1611,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func dollarInMath() throws {
     // Test that delimiters are properly stripped
     let str = "$a + b$"
@@ -1571,6 +1624,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexInlineExpression() throws {
     let str = "$\\frac{1}{2} + \\sqrt{3}$"
     let list = Math.Parser.build(fromString: str)
@@ -1593,6 +1647,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func inlineMathStyleForcing() throws {
     // Inline math should have textstyle prepended
     let str = "$\\sum_{i=1}^{n} i$"
@@ -1608,6 +1663,7 @@ struct ParserTests {
   // MARK: - Tests for build(fromString:error:) API with delimiters
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func inlineMathDollarWithError() throws {
     let str = "$x^2$"
     var error: Math.ParserError? = nil
@@ -1627,6 +1683,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func inlineMathParensWithError() throws {
     let str = "\\(E=mc^2\\)"
     var error: Math.ParserError? = nil
@@ -1646,6 +1703,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func inlineMathWithCasesWithError() throws {
     let str = "\\(\\begin{cases} x + y = 5 \\\\ 2x - y = 1 \\end{cases}\\)"
     var error: Math.ParserError? = nil
@@ -1675,6 +1733,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func displayMathDoubleDollarWithError() throws {
     let str = "$$x^2 + y^2 = z^2$$"
     var error: Math.ParserError? = nil
@@ -1684,6 +1743,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func displayMathBracketsWithError() throws {
     let str = "\\[\\sum_{i=1}^{n} i = \\frac{n(n+1)}{2}\\]"
     var error: Math.ParserError? = nil
@@ -1704,6 +1764,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func displayMathCasesWithoutDelimitersWithError() throws {
     let str = "\\begin{cases} x + y = 5 \\\\ 2x - y = 1 \\end{cases}"
     var error: Math.ParserError? = nil
@@ -1735,6 +1796,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func backwardCompatibilityNoDelimitersWithError() throws {
     let str = "x^2 + y^2 = z^2"
     var error: Math.ParserError? = nil
@@ -1744,6 +1806,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func invalidLatexWithError() throws {
     let str = "$\\notacommand$"
     var error: Math.ParserError? = nil
@@ -1755,6 +1818,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func mismatchedBracesWithError() throws {
     let str = "${x+2$"
     var error: Math.ParserError? = nil
@@ -1766,6 +1830,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func complexInlineExpressionWithError() throws {
     let str = "$\\frac{1}{2} + \\sqrt{3}$"
     var error: Math.ParserError? = nil
@@ -1790,6 +1855,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func inlineMathVectorDotWithError() throws {
     let str = "$\\vec{a} \\cdot \\vec{b}$"
     var error: Math.ParserError? = nil
@@ -1816,6 +1882,7 @@ struct ParserTests {
   // MARK: - Comprehensive Command Coverage Tests
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func greekLettersLowercase() throws {
     let commands = [
       "alpha", "beta", "gamma", "delta", "epsilon", "zeta", "eta", "theta",
@@ -1835,6 +1902,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func greekLettersUppercase() throws {
     let commands = [
       "Gamma", "Delta", "Theta", "Lambda", "Xi", "Pi", "Sigma", "Upsilon", "Phi", "Psi", "Omega",
@@ -1852,6 +1920,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func binaryOperators() throws {
     let operators = [
       "times", "div", "pm", "mp", "ast", "star", "circ", "bullet",
@@ -1880,6 +1949,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func relations() throws {
     let relations = [
       "leq", "geq", "neq", "equiv", "approx", "sim", "simeq", "cong",
@@ -1908,6 +1978,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func allAccents() throws {
     let accents = ["hat", "tilde", "bar", "dot", "ddot", "check", "grave", "acute", "breve", "vec"]
 
@@ -1932,6 +2003,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func delimiterPairs() throws {
     let delimiterPairs = [
       ("langle", "rangle"),
@@ -1962,6 +2034,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func largeOperators() throws {
     let operators = [
       "sum", "prod", "coprod", "int", "iint", "iiint", "oint",
@@ -1989,6 +2062,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func arrows() throws {
     let arrows = [
       "leftarrow", "rightarrow", "uparrow", "downarrow", "leftrightarrow",
@@ -2018,6 +2092,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func trigonometricFunctions() throws {
     let functions = [
       "sin", "cos", "tan", "cot", "sec", "csc",
@@ -2045,6 +2120,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func limitOperators() throws {
     let operators = ["lim", "limsup", "liminf", "max", "min", "sup", "inf", "det", "gcd"]
 
@@ -2069,6 +2145,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func specialSymbols() throws {
     let symbols = [
       "infty", "partial", "nabla", "prime", "hbar", "ell", "wp",
@@ -2088,6 +2165,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func logFunctions() throws {
     let logFuncs = ["log", "ln", "lg"]
 
@@ -2102,6 +2180,7 @@ struct ParserTests {
   // MARK: - High Priority Missing Features Tests
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func displayStyle() throws {
     // Test \displaystyle and \textstyle commands
     let testCases = [
@@ -2125,6 +2204,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func middleDelimiter() throws {
     // Test \middle command for delimiters in the middle of expressions
     let testCases = [
@@ -2147,6 +2227,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func substack() throws {
     // Test \substack for multi-line subscripts and limits
 
@@ -2190,6 +2271,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func manualDelimiterSizing() throws {
     // Test \big, \Big, \bigg, \Bigg sizing commands
     let testCases = [
@@ -2214,6 +2296,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func spacingCommands() throws {
     // Test fine-tuned spacing commands
     let testCases = [
@@ -2241,6 +2324,7 @@ struct ParserTests {
   // MARK: - Medium Priority Missing Features Tests
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func multipleIntegrals() throws {
     // Test \iint, \iiint, \iiiint for multiple integrals
     let testCases = [
@@ -2273,6 +2357,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func continuedFractions() throws {
     // Test \cfrac for continued fractions (already added but verify)
     let testCases = [
@@ -2296,6 +2381,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func displayStyleFraction() throws {
     // Test \dfrac - display-style fraction
     let str = "\\dfrac{1}{2}"
@@ -2331,6 +2417,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func textStyleFraction() throws {
     // Test \tfrac - text-style fraction
     let str = "\\tfrac{a}{b}"
@@ -2365,6 +2452,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func displayAndTextStyleFractions() throws {
     // Test the original LaTeX from the user's issue
     let str = "y'=-\\dfrac{2}{x^{3}}"
@@ -2403,6 +2491,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func boldsymbol() throws {
     // Test \boldsymbol for bold Greek letters
     let testCases = [
@@ -2426,6 +2515,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func starredMatrices() throws {
     // Test starred matrix environments with alignment
     let testCases = [
@@ -2471,6 +2561,7 @@ struct ParserTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func smallMatrix() throws {
     // Test \smallmatrix for inline matrices
     let testCases = [

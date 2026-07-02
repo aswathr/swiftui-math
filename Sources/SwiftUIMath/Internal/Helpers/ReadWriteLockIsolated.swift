@@ -1,5 +1,6 @@
 import Foundation
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 @dynamicMemberLookup
 final class ReadWriteLockIsolated<Value>: @unchecked Sendable {
   private var _value: Value
@@ -36,6 +37,7 @@ final class ReadWriteLockIsolated<Value>: @unchecked Sendable {
   }
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension ReadWriteLockIsolated where Value: Sendable {
   var value: Value {
     self.lock.sync {
@@ -44,6 +46,7 @@ extension ReadWriteLockIsolated where Value: Sendable {
   }
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension UnsafeMutablePointer where Pointee == pthread_rwlock_t {
   fileprivate static func create() -> Self {
     // allocate on the heap to create a stable pointer

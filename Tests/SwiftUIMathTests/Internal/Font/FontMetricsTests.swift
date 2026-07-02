@@ -14,12 +14,14 @@ struct FontMetricsTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func loadsGraphicsFont() throws {
     let font = try #require(Math.FontRegistry.shared.graphicsFont(named: fontName))
     #expect(font.fullName != nil)
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func createsPlatformFontsAtDifferentSizes() throws {
     let font12 = try makePlatformFont(size: 12)
     let font24 = try makePlatformFont(size: 24)
@@ -28,12 +30,14 @@ struct FontMetricsTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func metricsHavePositiveMathUnit() throws {
     let platformFont = try makePlatformFont()
     #expect(platformFont.metrics.mathUnit > 0)
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func verticalVariantsUseTableEntries() throws {
     let platformFont = try makePlatformFont()
     let table = try #require(Math.FontRegistry.shared.table(named: fontName))
@@ -45,6 +49,7 @@ struct FontMetricsTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func horizontalVariantsUseTableEntries() throws {
     let platformFont = try makePlatformFont()
     let table = try #require(Math.FontRegistry.shared.table(named: fontName))
@@ -56,6 +61,7 @@ struct FontMetricsTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func verticalAssemblyIsAvailableForExtensibleGlyphs() throws {
     let platformFont = try makePlatformFont()
     let table = try #require(Math.FontRegistry.shared.table(named: fontName))
@@ -67,6 +73,7 @@ struct FontMetricsTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func metricValuesAreFinite() throws {
     let platformFont = try makePlatformFont()
     let glyph = platformFont.cgFont.getGlyphWithGlyphName(name: "f" as CFString)

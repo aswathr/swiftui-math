@@ -1,5 +1,6 @@
 import Foundation
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension Math {
   final class DisplayProvider: Sendable {
     private struct Cache {
@@ -99,6 +100,7 @@ extension Math {
   }
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension Math.Style.Level {
   fileprivate init(_ typesettingStyle: Math.TypesettingStyle) {
     switch typesettingStyle {
@@ -110,6 +112,7 @@ extension Math.Style.Level {
   }
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension CGFloat {
   fileprivate func halfPointRounded() -> CGFloat {
     guard self > 0 else { return 0 }

@@ -31,6 +31,7 @@ import SwiftUI
 /// Math("\\color{#cc0000}{a}+\\color{#00aa00}{b}+\\color{#0000cc}{c}")
 ///   .mathRenderingMode(.multicolor)
 /// ```
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 public struct Math: View {
   @Environment(\.mathFont) private var font
   @Environment(\.mathTypesettingStyle) private var typesettingStyle
@@ -71,6 +72,7 @@ public struct Math: View {
   }
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension Math {
   @_spi(Textual)
   public struct TypographicBounds: Sendable {
@@ -123,6 +125,7 @@ extension Math {
   }
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension Math {
   private struct Layout: SwiftUI.Layout {
     let latex: String

@@ -1,5 +1,6 @@
 import Foundation
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension String {
   static let multiplication = "\u{00D7}"
   static let division = "\u{00F7}"
@@ -16,6 +17,7 @@ extension String {
   static let degree = "\u{00B0}"
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension UTF32Char {
   static let capitalGreekStart = UTF32Char(0x0391)
   static let capitalGreekEnd = UTF32Char(0x03A9)
@@ -55,6 +57,7 @@ extension UTF32Char {
   static let numberBlackboardStart = UTF32Char(0x1D7D8)
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension Character {
   var utf32: UTF32Char { self.unicodeScalars.map { $0.value }.reduce(0, +) }
   var isLowerEnglish: Bool { self >= "a" && self <= "z" }

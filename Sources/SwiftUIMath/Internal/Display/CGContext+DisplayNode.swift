@@ -2,6 +2,7 @@ import CoreGraphics
 import CoreText
 import Foundation
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension CGContext {
   func draw(_ displayNode: Math.DisplayNode, foregroundColor: CGColor) {
     let foregroundColor =
@@ -34,6 +35,7 @@ extension CGContext {
   }
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension CGContext {
   private func draw(_ list: Math.DisplayList, foregroundColor: CGColor) {
     saveGState()

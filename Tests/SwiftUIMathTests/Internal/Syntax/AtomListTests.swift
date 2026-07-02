@@ -6,6 +6,7 @@ import Testing
 @Suite
 struct AtomListTests {
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func parsesScriptsAndFinalizesAtomList() throws {
     let input = "-52x^{13+y}_{15-} + (-12.3 *)\\frac{-12}{15.2}"
     let list = try parseFinalizedAtomList(from: input)
@@ -16,6 +17,7 @@ struct AtomListTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func appendsAtomsInOrder() {
     let list = Math.AtomList()
     #expect(list.atoms.isEmpty)
@@ -33,6 +35,7 @@ struct AtomListTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func insertsAtomsAtIndices() {
     let list = Math.AtomList()
     let first = Math.AtomFactory.placeholder()
@@ -55,6 +58,7 @@ struct AtomListTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func appendsListContents() {
     let list1 = Math.AtomList()
     let atom1 = Math.AtomFactory.placeholder()
@@ -80,6 +84,7 @@ struct AtomListTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func removesLastAtom() {
     let list = Math.AtomList()
     let atom = Math.AtomFactory.placeholder()
@@ -103,6 +108,7 @@ struct AtomListTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func removesAtomAtIndex() {
     let list = Math.AtomList()
     let first = Math.AtomFactory.placeholder()
@@ -119,6 +125,7 @@ struct AtomListTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func removesAtomsInRange() {
     let list = Math.AtomList()
     let first = Math.AtomFactory.placeholder()
@@ -137,6 +144,7 @@ struct AtomListTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func copiesAtomListsWithDistinctAtoms() throws {
     let list = Math.AtomList()
     let atom1 = Math.AtomFactory.placeholder()
@@ -151,6 +159,7 @@ struct AtomListTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func initializesAtomWithCorrectNucleusAndType() {
     var atom = Math.Atom(type: .open, value: "(")
     #expect(atom.nucleus == "(")
@@ -162,6 +171,7 @@ struct AtomListTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func supportsScriptsWhenAllowed() {
     var atom = Math.Atom(type: .open, value: "(")
     #expect(atom.allowsScripts)
@@ -179,6 +189,7 @@ struct AtomListTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func copiesAtomsWithScripts() throws {
     let list = Math.AtomList()
     let atom1 = Math.AtomFactory.placeholder()
@@ -207,6 +218,7 @@ struct AtomListTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func copiesFraction() throws {
     let list = Math.AtomList()
     let atom1 = Math.AtomFactory.placeholder()
@@ -241,6 +253,7 @@ struct AtomListTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func copiesRadical() throws {
     let list = Math.AtomList()
     let atom1 = Math.AtomFactory.placeholder()
@@ -270,6 +283,7 @@ struct AtomListTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func copiesLargeOperator() throws {
     let largeOperator = Math.LargeOperator(limits: true)
     largeOperator.nucleus = "lim"
@@ -282,6 +296,7 @@ struct AtomListTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func copiesInnerAtom() throws {
     let list = Math.AtomList()
     let atom1 = Math.AtomFactory.placeholder()
@@ -317,6 +332,7 @@ struct AtomListTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func setsInnerBoundaries() {
     let inner = Math.Inner()
 
@@ -332,6 +348,7 @@ struct AtomListTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func copiesOverline() throws {
     let list = Math.AtomList()
     let atom1 = Math.AtomFactory.placeholder()
@@ -355,6 +372,7 @@ struct AtomListTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func copiesUnderline() throws {
     let list = Math.AtomList()
     let atom1 = Math.AtomFactory.placeholder()
@@ -378,6 +396,7 @@ struct AtomListTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func copiesAccent() throws {
     let list = Math.AtomList()
     let atom1 = Math.AtomFactory.placeholder()
@@ -401,6 +420,7 @@ struct AtomListTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func copiesSpace() throws {
     let space = Math.Space(amount: 3)
     #expect(space.type == .space)
@@ -411,6 +431,7 @@ struct AtomListTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func copiesStyle() throws {
     let style = Math.Style(level: .script)
     #expect(style.type == .style)
@@ -421,6 +442,7 @@ struct AtomListTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func createsTableAtom() {
     let table = Math.Table()
     #expect(table.type == .table)
@@ -466,6 +488,7 @@ struct AtomListTests {
   }
 
   @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
   func copiesTableAtom() throws {
     let table = Math.Table()
     #expect(table.type == .table)
@@ -639,6 +662,7 @@ struct AtomListTests {
   }
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension Math.AtomList {
   func removeLastAtomForTesting() {
     guard !atoms.isEmpty else { return }

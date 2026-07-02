@@ -1,6 +1,7 @@
 import CoreGraphics
 import Foundation
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension CGColor {
   static func fromHexString(_ hexString: String) -> CGColor? {
     guard !hexString.isEmpty, hexString.hasPrefix("#") else { return nil }

@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension Math {
   /// Identifies a math font and size used for typesetting.
   public struct Font: Hashable, Sendable {
@@ -32,6 +33,7 @@ extension Math {
   }
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension Math.Font.Name {
   /// Latin Modern Math.
   public static let latinModern: Self = "latinmodern-math"
@@ -59,6 +61,7 @@ extension Math.Font.Name {
   public static let leteSans: Self = "LeteSansMath"
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension View {
   /// Sets the math font used by ``Math`` views in this hierarchy.
   public func mathFont(_ font: Math.Font) -> some View {
@@ -66,6 +69,7 @@ extension View {
   }
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension EnvironmentValues {
   @Entry var mathFont = Math.Font(name: .latinModern, size: 20)
 }

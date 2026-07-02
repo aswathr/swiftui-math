@@ -10,6 +10,7 @@
     private let layout = SwiftUISnapshotLayout.device(config: .iPhone8)
 
     @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
     func displayAndInlineStyles() {
       let view = VStack(alignment: .leading, spacing: 16) {
         Math("\\frac{1}{2}+\\sqrt{2}+\\sum_{i=1}^{n}x_i")
@@ -27,6 +28,7 @@
     }
 
     @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
     func multicolorExpressions() {
       let view = VStack(alignment: .leading, spacing: 16) {
         Math("\\color{#cc0000}{a}+\\color{#00aa00}{b}+\\color{#0000cc}{c}")
@@ -45,6 +47,7 @@
     }
 
     @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
     func matricesAndCases() {
       let view = VStack(alignment: .leading, spacing: 16) {
         Math("A=\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}")
@@ -62,6 +65,7 @@
     }
 
     @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
     func largeOperatorsAndLimits() {
       let view = VStack(alignment: .leading, spacing: 16) {
         Math("\\lim_{n\\to\\infty}\\sum_{k=1}^{n}\\frac{1}{k^2}=\\frac{\\pi^2}{6}")
@@ -75,6 +79,7 @@
     }
 
     @Test
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
     func inlineTextWrapping() {
       let view = VStack(alignment: .leading, spacing: 16) {
         Math("\\text{Rappelons la conversion : 1 km équivaut à 1000 m.}")

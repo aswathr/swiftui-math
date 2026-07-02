@@ -2,6 +2,7 @@
 @preconcurrency import CoreText
 import Foundation
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension Math {
   struct FontMetrics: Sendable {
     struct GlyphPart: Sendable {
@@ -123,6 +124,7 @@ extension Math {
 
 // MARK: - Fractions
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension Math.FontMetrics {
   var fractionNumeratorDisplayStyleShiftUp: CGFloat {
     constant(named: "FractionNumeratorDisplayStyleShiftUp")
@@ -171,6 +173,7 @@ extension Math.FontMetrics {
 
 // MARK: - Stacks
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension Math.FontMetrics {
   var skewedFractionHorizonalGap: CGFloat {
     constant(named: "SkewedFractionHorizontalGap")
@@ -207,6 +210,7 @@ extension Math.FontMetrics {
 
 // MARK: - Superscripts / Subscripts
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension Math.FontMetrics {
   var superscriptShiftUp: CGFloat {
     constant(named: "SuperscriptShiftUp")
@@ -251,6 +255,7 @@ extension Math.FontMetrics {
 
 // MARK: - Radicals
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension Math.FontMetrics {
   var radicalExtraAscender: CGFloat {
     constant(named: "RadicalExtraAscender")
@@ -283,6 +288,7 @@ extension Math.FontMetrics {
 
 // MARK: - Limits
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension Math.FontMetrics {
   var upperLimitBaselineRiseMin: CGFloat {
     constant(named: "UpperLimitBaselineRiseMin")
@@ -307,6 +313,7 @@ extension Math.FontMetrics {
 
 // MARK: - Underline
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension Math.FontMetrics {
   var underbarVerticalGap: CGFloat {
     constant(named: "UnderbarVerticalGap")
@@ -323,6 +330,7 @@ extension Math.FontMetrics {
 
 // MARK: - Overline
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension Math.FontMetrics {
   var overbarVerticalGap: CGFloat {
     constant(named: "OverbarVerticalGap")
@@ -339,6 +347,7 @@ extension Math.FontMetrics {
 
 // MARK: - Constants
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension Math.FontMetrics {
   var axisHeight: CGFloat {
     constant(named: "AxisHeight")
@@ -363,6 +372,7 @@ extension Math.FontMetrics {
 
 // MARK: - Accent
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension Math.FontMetrics {
   var accentBaseHeight: CGFloat {
     constant(named: "AccentBaseHeight")
@@ -375,6 +385,7 @@ extension Math.FontMetrics {
 
 // MARK: - Glyph Construction
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension Math.FontMetrics {
   var minConnectorOverlap: CGFloat {
     constant(named: "MinConnectorOverlap")
@@ -383,6 +394,7 @@ extension Math.FontMetrics {
 
 // MARK: - Private
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension Math.FontMetrics {
   private func constant(named name: String) -> CGFloat {
     guard let value = table.constants[name] else {

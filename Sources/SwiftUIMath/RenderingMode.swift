@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension Math {
   /// Controls how colors are applied when rendering math.
   public enum RenderingMode: Sendable {
@@ -15,6 +16,7 @@ extension Math {
   }
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension View {
   /// Sets the rendering mode for ``Math`` views in this hierarchy.
   public func mathRenderingMode(_ mathRenderingMode: Math.RenderingMode) -> some View {
@@ -22,6 +24,7 @@ extension View {
   }
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension EnvironmentValues {
   @Entry var mathRenderingMode: Math.RenderingMode = .monochrome
 }
