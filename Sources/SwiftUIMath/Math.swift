@@ -158,6 +158,8 @@ extension Math {
   }
 }
 
+
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 #Preview("Display Style") {
   Math("\\frac{1}{2}+\\sqrt{2}+\\sum_{i=1}^{n}x_i")
     .mathFont(Math.Font(name: .latinModern, size: 24))
@@ -171,6 +173,7 @@ extension Math {
     .padding()
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 #Preview("Text Style") {
   Math("\\int_0^1 x^2\\,dx = \\frac{1}{3}")
     .mathTypesettingStyle(.text)
@@ -178,6 +181,7 @@ extension Math {
     .padding()
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 #Preview("Large Operators") {
   Math("\\lim_{n\\to\\infty}\\sum_{k=1}^{n}\\frac{1}{k^2}=\\frac{\\pi^2}{6}")
     .mathTypesettingStyle(.display)
@@ -185,6 +189,7 @@ extension Math {
     .padding()
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 #Preview("Matrix") {
   Math("A=\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}")
     .mathTypesettingStyle(.display)
@@ -192,6 +197,7 @@ extension Math {
     .padding()
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 #Preview("Cases") {
   Math("\\begin{cases} x + y = 5 \\\\ 2x - y = 1 \\end{cases}")
     .mathTypesettingStyle(.display)
@@ -199,6 +205,7 @@ extension Math {
     .padding()
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 #Preview("Accents And Scripts") {
   Math("\\hat{x}+\\bar{y}+\\vec{z}+a_{i}^{2}")
     .mathTypesettingStyle(.text)
@@ -206,6 +213,7 @@ extension Math {
     .padding()
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 #Preview("Multicolor") {
   Math("\\color{#cc0000}{a}+\\color{#00aa00}{b}+\\color{#0000cc}{c}")
     .mathTypesettingStyle(.text)
@@ -214,6 +222,7 @@ extension Math {
     .padding()
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 #Preview("Multicolor 2") {
   Math("\\textcolor{#ff8800}{\\int_0^1 x^2\\,dx}=\\textcolor{#0088ff}{\\frac{1}{3}}")
     .mathRenderingMode(.multicolor)

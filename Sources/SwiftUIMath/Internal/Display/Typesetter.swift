@@ -4,6 +4,7 @@ import Foundation
 
 // MARK: - Inter Element Spacing
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 private enum InterElementSpaceType: Int {
   case invalid = -1
   case none = 0
@@ -13,6 +14,7 @@ private enum InterElementSpaceType: Int {
   case nsThick
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 private let interElementSpaceArray: [[InterElementSpaceType]] =
   //   ordinary   operator   binary     relation  open       close     punct     fraction
   [
@@ -27,11 +29,13 @@ private let interElementSpaceArray: [[InterElementSpaceType]] =
     [.nsMedium, .nsThin, .nsMedium, .nsThick, .none, .none, .none, .nsThin],
   ]  // radical
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 private func getInterElementSpaces() -> [[InterElementSpaceType]] {
   return interElementSpaceArray
 }
 
 // Get's the index for the given type. If row is true, the index is for the row (i.e. left element) otherwise it is for the column (right element)
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 func getInterElementSpaceArrayIndexForType(_ type: Math.AtomType, row: Bool) -> Int {
   switch type {
   case .color, .textColor, .colorBox, .ordinary, .placeholder:  // A placeholder is treated as ordinary
@@ -75,6 +79,7 @@ func getInterElementSpaceArrayIndexForType(_ type: Math.AtomType, row: Bool) -> 
 
 // MARK: - Italics
 // mathit
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 func getItalicized(_ ch: Character) -> UTF32Char {
   var unicode = ch.utf32
 
@@ -99,6 +104,7 @@ func getItalicized(_ ch: Character) -> UTF32Char {
 }
 
 // mathbf
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 func getBold(_ ch: Character) -> UTF32Char {
   var unicode = ch.utf32
   if ch.isUpperEnglish {
@@ -120,6 +126,7 @@ func getBold(_ ch: Character) -> UTF32Char {
 }
 
 // mathbfit
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 func getBoldItalic(_ ch: Character) -> UTF32Char {
   var unicode = ch.utf32
   if ch.isUpperEnglish {
@@ -142,6 +149,7 @@ func getBoldItalic(_ ch: Character) -> UTF32Char {
 }
 
 // LaTeX default
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 func getDefaultStyle(_ ch: Character) -> UTF32Char {
   if ch.isLowerEnglish || ch.isUpperEnglish || ch.isLowerGreek || ch.isGreekSymbol {
     return getItalicized(ch)
@@ -161,6 +169,7 @@ func getDefaultStyle(_ ch: Character) -> UTF32Char {
 }
 
 // mathcal/mathscr (caligraphic or script)
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 func getCaligraphic(_ ch: Character) -> UTF32Char {
   // Caligraphic has lots of exceptions:
   switch ch {
@@ -205,6 +214,7 @@ func getCaligraphic(_ ch: Character) -> UTF32Char {
 }
 
 // mathtt (monospace)
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 func getTypewriter(_ ch: Character) -> UTF32Char {
   if ch.isUpperEnglish {
     return UTF32Char.mathCapitalTTStart + (ch.utf32 - Character("A").utf32)
@@ -219,6 +229,7 @@ func getTypewriter(_ ch: Character) -> UTF32Char {
 }
 
 // mathsf
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 func getSansSerif(_ ch: Character) -> UTF32Char {
   if ch.isUpperEnglish {
     return UTF32Char.mathCapitalSansSerifStart + (ch.utf32 - Character("A").utf32)
@@ -233,6 +244,7 @@ func getSansSerif(_ ch: Character) -> UTF32Char {
 }
 
 // mathfrak
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 func getFraktur(_ ch: Character) -> UTF32Char {
   // Fraktur has exceptions:
   switch ch {
@@ -260,6 +272,7 @@ func getFraktur(_ ch: Character) -> UTF32Char {
 }
 
 // mathbb (double struck)
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 func getBlackboard(_ ch: Character) -> UTF32Char {
   // Blackboard has lots of exceptions:
   switch ch {
@@ -292,6 +305,7 @@ func getBlackboard(_ ch: Character) -> UTF32Char {
   return getDefaultStyle(ch)
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 func styleCharacter(_ ch: Character, fontStyle: Math.Atom.FontStyle) -> UTF32Char {
   switch fontStyle {
   case .default:
@@ -317,6 +331,7 @@ func styleCharacter(_ ch: Character, fontStyle: Math.Atom.FontStyle) -> UTF32Cha
   }
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 func changeFont(_ str: String, fontStyle: Math.Atom.FontStyle) -> String {
   var retval = ""
   let codes = Array(str)
@@ -330,6 +345,7 @@ func changeFont(_ str: String, fontStyle: Math.Atom.FontStyle) -> String {
   return retval
 }
 
+@available(macOS 14.0, iOS 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 func getBboxDetails(_ bbox: CGRect, ascent: inout CGFloat, descent: inout CGFloat) {
   ascent = max(0, CGRectGetMaxY(bbox) - 0)
 
