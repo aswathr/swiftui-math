@@ -91,7 +91,8 @@ Pod::Spec.new do |spec|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-
+  
+  spec.module_name      = 'SwiftUIMath' 
   spec.source_files  = "Sources/**/*.{swift}"
   # spec.exclude_files = "Classes/Exclude"
 
